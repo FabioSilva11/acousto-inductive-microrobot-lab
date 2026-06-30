@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador HTML5 — Microrrobô Acústico-Indutivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Simulador HTML5 — Microrrobô Acústico-Indutivo</h1>
+      <p>Modelo educacional: navegação em fluido viscoso, liberação simulada de medicamento e enxame.</p>
+    </header>
+
+    <section class="panel">
+      <div class="controls">
+        <label>Robôs <input id="robots" type="range" min="1" max="50" value="18"><span id="robotsV"></span></label>
+        <label>Viscosidade do sangue simulada <input id="viscosity" type="range" min="1" max="8" step="0.1" value="3.5"><span id="viscosityV"></span> mPa·s</label>
+        <label>Fluxo do vaso <input id="flow" type="range" min="0" max="5" step="0.1" value="1.2"><span id="flowV"></span> mm/s</label>
+        <label>Intensidade acústica simulada <input id="acoustic" type="range" min="0" max="10" step="0.1" value="5"><span id="acousticV"></span></label>
+        <label>Liberação medicamento <input id="release" type="range" min="0" max="1" step="0.01" value="0.25"><span id="releaseV"></span></label>
+        <label><input id="swarm" type="checkbox" checked> Controle de enxame</label>
+        <button id="reset">Reiniciar</button>
+      </div>
+      <canvas id="sim" width="1100" height="620"></canvas>
+    </section>
+
+    <section class="notes">
+      <h2>Interpretação</h2>
+      <p>As partículas azuis são robôs. O alvo roxo representa célula/região-alvo simulada. O brilho verde é liberação de medicamento abstrata. O indicador vermelho é um índice visual de interação celular, não um parâmetro real de ablação.</p>
+      <p><strong>Atenção:</strong> este simulador não calcula segurança médica, não prevê morte celular real e não deve ser usado para experimentos biomédicos.</p>
+    </section>
+  </main>
+  <script src="simulator.js"></script>
+</body>
+</html>
