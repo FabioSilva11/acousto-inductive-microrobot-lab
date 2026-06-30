@@ -1,0 +1,16 @@
+name: Python check
+on:
+  push:
+  pull_request:
+jobs:
+  run-demos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python examples/run_motion_demo.py
+      - run: python examples/run_swarm_demo.py
+      - run: python examples/run_therapy_safety_demo.py
