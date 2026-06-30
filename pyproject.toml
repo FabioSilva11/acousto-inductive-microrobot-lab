@@ -1,0 +1,9 @@
+[project]
+name = "acousto-inductive-microrobot-lab"
+version = "0.1.0"
+description = "Educational simulator for acousto-inductive microrobot concepts in viscous flow"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "matplotlib>=3.8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
