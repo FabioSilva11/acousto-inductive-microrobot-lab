@@ -1,0 +1,14 @@
+:root { font-family: Inter, Arial, sans-serif; color: #14213d; background: #eef3f8; }
+body { margin: 0; }
+main { max-width: 1240px; margin: 0 auto; padding: 24px; }
+header { margin-bottom: 16px; }
+h1 { margin: 0; font-size: 28px; }
+p { line-height: 1.5; }
+.panel { display: grid; grid-template-columns: 320px 1fr; gap: 16px; align-items: start; }
+.controls { background: #fff; border: 1px solid #d5deea; border-radius: 14px; padding: 16px; box-shadow: 0 6px 22px rgba(20,33,61,.08); }
+.controls label { display: block; margin-bottom: 14px; font-size: 14px; }
+.controls input[type="range"] { width: 100%; }
+button { background: #0b4a8f; color: white; border: 0; border-radius: 10px; padding: 10px 14px; cursor: pointer; font-weight: 700; }
+canvas { width: 100%; height: auto; background: #fff; border: 1px solid #d5deea; border-radius: 14px; box-shadow: 0 6px 22px rgba(20,33,61,.08); }
+.notes { background: #fff; border: 1px solid #d5deea; border-radius: 14px; padding: 16px; margin-top: 16px; }
+@media (max-width: 900px) { .panel { grid-template-columns: 1fr; } }
